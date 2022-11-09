@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "dev": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "type": "module",
   "author": "Ivan Cardozo",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

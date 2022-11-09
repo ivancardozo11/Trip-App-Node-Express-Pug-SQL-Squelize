@@ -6,6 +6,8 @@ const port  = process.env.PORT || 4000;
 
 
 
+app.set('view engine', 'pug');
+
 app.use('/', router);
 
 
