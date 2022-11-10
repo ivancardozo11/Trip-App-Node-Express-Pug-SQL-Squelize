@@ -8,6 +8,13 @@ const port  = process.env.PORT || 4000;
 
 app.set('view engine', 'pug');
 
+app.use((req, res, next)=>{
+
+    const year = new Date();
+    res.locals.actualYear = year.getFullYear();
+    return next();
+})
+
 app.use(express.static('public'));
 
 app.use('/', router);
