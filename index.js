@@ -6,7 +6,10 @@ import db from './config/db.js';
 const app = express();
 const port  = process.env.PORT || 4000;
 
-db.authenticate().then(()=> console.log('Base de datos conectada')).catch( error => console.log(error));
+db.authenticate().then(()=> 
+console.log('Database successfully connected'))
+.catch( error => console.log(error));
+
 app.set('view engine', 'pug');
 
 app.use((req, res, next)=>{
