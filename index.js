@@ -12,6 +12,7 @@ app.use((req, res, next)=>{
 
     const year = new Date();
     res.locals.actualYear = year.getFullYear();
+    res.locals.nombreSitio = "Agencia de viajes";
     return next();
 })
 
@@ -24,6 +25,6 @@ app.use('/', router);
 
 
 app.listen(port,() =>{
-    console.log(`Server working properly on port ${port}`)
+    console.log(`Server working properly on port ${port}`);
 })
 
