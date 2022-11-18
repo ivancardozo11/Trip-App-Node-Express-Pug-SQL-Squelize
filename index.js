@@ -2,7 +2,6 @@ import express from 'express';
 import router from './routes/index.js';
 import db from './config/db.js';
 
-console.log(process.env.DB_KEY)
 const app = express();
 const port  = process.env.PORT || 4000;
 
