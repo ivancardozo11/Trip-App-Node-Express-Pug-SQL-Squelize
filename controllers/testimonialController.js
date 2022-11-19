@@ -23,7 +23,8 @@ const guardarTestimonial = async (req, res)=>{
             errores,
             nombre,
             correo,
-            mensaje
+            mensaje,
+            testimoniales
         })
     }else {
             try {
@@ -37,8 +38,6 @@ const guardarTestimonial = async (req, res)=>{
             }
 
         }
-            
-    console.log(errores);
 
 }
 
