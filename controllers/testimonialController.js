@@ -1,4 +1,6 @@
-const guardarTestimonial = (req, res)=>{
+import { Testimonial } from "../models/Testimoniales.js";
+
+const guardarTestimonial = async (req, res)=>{
 
     const { nombre, correo, mensaje } = req.body;
 
@@ -14,6 +16,28 @@ const guardarTestimonial = (req, res)=>{
         errores.push({mensaje: 'El mensaje esta vacio'});
     }
 
+    if(errores.length > 0){
+
+        res.render('testimoniales', {
+            pagina: 'Testimoniales',
+            errores,
+            nombre,
+            correo,
+            mensaje
+        })
+    }else {
+            try {
+                await Testimonial.create({
+                    nombre,
+                    correo,
+                    mensaje
+                })
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
+            
     console.log(errores);
 
 }
